@@ -1,0 +1,73 @@
+.user-detail-wrapper {
+    display: flex;
+    padding: 10px;
+}
+.user-detail-wrapper ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.listSection {
+    flex: 1;
+    
+}
+.listWrp {
+    border-right: 1px dashed #dfdbdb;
+    padding-right: 35px;
+}
+
+.userList {
+    max-height: 551px;
+    overflow-y: auto;
+}
+
+
+.userList li  {
+    padding: 10px;
+    background: #f7f4f4;
+    margin: 1px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.userList li:hover, .userList li.active {
+    background: #d8d6d6;
+
+}
+
+.userInfo {
+    width: 500px;
+    /* border-left: 1px solid #d2d2d2; */
+    padding-left: 35px;
+}
+
+.userDetail {
+    list-style: none;
+    padding: 5px;
+}
+
+.userDetail li {
+    margin: 10px 0 5px;
+    padding-bottom: 5px;
+}
+.userDetail li p {
+    padding: 0;
+    margin: 0;
+}
+.clicktoshow {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-style: italic;
+    font-variant: small-caps;
+}
+.loading {
+    height: 251px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-style: oblique;
+    font-variant: small-caps;
+}

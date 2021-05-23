@@ -1,0 +1,37 @@
+<h2> User Detail</h2>
+<h3>{{errorMsg}}</h3>
+<div class="user-detail-wrapper" *ngIf="userList.length > 0; else loadingBlock">
+    <section class="listSection">
+        <h3>User List</h3>
+        <div class="listWrp">
+            <ul class="userList">
+                <li *ngFor="let user of userList; selectedIndex as i" (click)="showUnserInfo(user.id)"
+                    [ngClass]="{'active': activeClass == user.id}">
+                    {{user.name}}
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="userInfo">
+        <h3> User Info</h3>
+        <ul class="userDetail" *ngIf="userInfo.address; else elseBlock">
+            <li>
+                <address>
+                    <p>#{{userInfo.id}}</p>
+                    <p>{{userInfo.name}}</p>
+                    <p>{{userInfo.email}}</p>
+                    <p>{{userInfo.address.street}}, {{userInfo.address.suite}}, {{userInfo.address.city}},
+                        {{userInfo.address.zipcode}}</p>
+                    <p> {{userInfo.phone}}</p>
+                    <p>{{userInfo.website}}</p>
+                </address>
+            </li>
+        </ul>
+        <ng-template #elseBlock>
+            <div class="clicktoshow">Please cleck user list to show the detail</div>
+        </ng-template>
+    </section>
+</div>
+<ng-template #loadingBlock>
+    <div class="loading">Loading...</div>
+</ng-template>
